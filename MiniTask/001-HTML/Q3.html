@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+            width: 50%;
+            display: block;
+            padding: 15px;
+            background-color: #f2f2f2;
+
+        }
+
+        .form-element {
+            margin: 10px;
+        }
+
+
+        input {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            padding: 5px;
+            max-width: 100%;
+            min-width: 100%;
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+            min-height: 100px;
+            max-height: 150px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 10px;
+            width: 100px;
+            background: #45a049;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-element">
+            <label for="fname">First Name:</label><br>
+            <input type="text" name="fname" placeholder="Your first name" required><br>
+
+            <label for="fname">Last Name:</label><br>
+            <input type="text" name="fname" placeholder="Your last name" required><br>
+
+            <label for="fname">Email Address:</label><br>
+            <input type="email" name="fname" placeholder="Your email" required><br>
+
+            <label for="fname">Description:</label><br>
+            <textarea placeholder="write something..." required></textarea><br>
+
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
