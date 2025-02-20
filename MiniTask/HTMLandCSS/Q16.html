@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transparency</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .image {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .image img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            opacity: 0.3;
+            transition: .5s;
+        }
+
+        .image img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="../assets/istockphoto-529664572-612x612.jpg">
+        <p>FRUITS</p>
+    </div>
+
+</body>
+
+</html>

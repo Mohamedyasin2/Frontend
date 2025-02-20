@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color an Element</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+    <h1 class="text-[30px]">HELLO <span id="hover-element">WORLD</span></h1>
+
+    <!-- JavaScript -->
+    <script>
+
+        const element = document.getElementById("hover-element");
+
+        element.addEventListener("mouseover", () => {
+            element.style.color = 'red';
+        });
+
+        element.addEventListener("mouseout", () => {
+            element.style.color = 'black';
+        })
+
+    </script>
+</body>
+
+</html>

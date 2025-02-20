@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+    Hello<span id="output" class="pl-1"></span>
+
+    <!-- Javascript -->
+
+    <script>
+        const user = prompt("Enter your name:");
+
+        if (user !== null && user.trim() !== "") {
+            document.getElementById("output").textContent = user;
+        } else {
+            document.getElementById("output").textContent = "No input provided";
+        }
+    </script>
+</body>
+
+</html>

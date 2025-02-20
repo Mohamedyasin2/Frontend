@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Coordinates</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+    <div class="rounded-lg shadow-lg p-3 w-70 bg-gray-400" id="clickable">
+        <h1>Click me to get mouse coordinates</h1>
+        <p class="text-gray-500 text-[13px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. A praesentium
+            nulla architecto
+            molestias quod,
+            commodi quia omnis ab deserunt, amet suscipit expedita repellat, ipsa facere dicta pariatur dolor veritatis
+            sint!
+        </p>
+        <h4 class="text-white">Mouse Coordinates:<span id="coordinates">click the heading</span></h4>
+    </div>
+    <script>
+        document.getElementById("clickable").addEventListener("click", (e) => {
+            let x = e.clientX; // x coordinates
+            let y = e.clientY; // y coordinates
+
+            document.getElementById("coordinates").textContent = `X: ${x}, Y: ${y}`;
+        });
+    </script>
+
+</body>
+
+</html>
