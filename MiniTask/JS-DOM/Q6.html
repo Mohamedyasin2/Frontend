@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <form onsubmit="return validate(event)" id="my_form"
+        class="w-70 border border-gray-300 shadow-2xl rounded-lg bg-white block p-4">
+        <h3 class="text-center">Form Validation</h3>
+
+        <label for="name" class="after:ml-0.5 after:text-red-500 after:content-['*']">Name:</label><br>
+        <input type="text" id="name" name="name"
+            class="border border-gray-200 rounded-sm w-full focus:outline outline-sky-500 pl-2"><br>
+        <span id="name_error" class="text-red-500 text-[12px]"></span>
+        <br>
+
+        <label for="email" class="after:text-red-500 after:content-['*']">Email:</label><br>
+        <input type="email" id="email" name="email"
+            class="border border-gray-200 rounded-sm w-full focus:outline outline-sky-500 pl-2">
+        <span id="email_error" class="text-red-500 text-[12px]"></span>
+        <br>
+
+        <div class="text-center">
+            <button type="submit"
+                class="border border-gray-300 p-1 w-30 rounded-sm bg-green-500 text-white mt-3 hover:bg-green-600 transition">Submit</button>
+        </div>
+
+    </form>
+
+    <!-- java script -->
+
+    <script>
+
+        function validate(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let name_error = document.getElementById("name_error");
+            let email_error = document.getElementById("email_error");
+
+            name_error.innerText = "";
+            email_error.innerText = "";
+
+            let valid = true;
+
+            if (name === "") {
+                name_error.innerText = "Name is required";
+                valid = false;
+            }
+
+            if (email === "") {
+                email_error.innerText = "Email is required";
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                email_error.innerText = "Invalid email format";
+                valid = false;
+            }
+
+            return valid;
+        }
+
+    </script>
+
+</body>
+
+</html>

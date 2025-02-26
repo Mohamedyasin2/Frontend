@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full screen and Exit full screen</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+    <button onclick="fullscreen()" class="p-4 border border-gray-500 bg-gray-300 rounded-lg w-40 mr-5">Full
+        Screen</button>
+    <button onclick="exitFullScreen()" class="p-4 border border-gray-500 bg-gray-300 rounded-lg w-40">Exit full
+        screen</button>
+
+    <!-- java script -->
+    <script>
+        // for full screen
+        function fullscreen() {
+
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
+            else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+
+        // for exit full screen
+
+        function exitFullScreen() {
+
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { // Firefox
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { // IE/Edge
+                document.msExitFullscreen();
+            }
+
+        }
+    </script>
+</body>
+
+</html>

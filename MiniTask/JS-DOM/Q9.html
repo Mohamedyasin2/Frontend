@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Edit</title>
+</head>
+
+<body>
+    <h1>Hover the below text you can edit.</h1>
+    <p onmouseover="editable(this)" onmouseout="makeUneditable(this)">Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Animi error maiores, dolor sit aut saepe
+        quis distinctio modi quaerat sed nemo praesentium id, quo odio omnis dolores sint odit? Consectetur.</p>
+
+    <script>
+        function editable(element) {
+            element.setAttribute("contenteditable", true);
+        }
+
+        function makeUneditable(element) {
+            element.removeAttribute("contenteditable");
+        }
+    </script>
+</body>
+
+</html>

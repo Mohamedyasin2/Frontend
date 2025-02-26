@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counts</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen">
+    <div class="shadow-lg rounded-lg w-80 border border-gray-300 p-4">
+        <h1 class="text-sky-500 mb-5">Characters Counts</h1>
+        <textarea id="textinput" class="border border-sky-500 rounded-lg p-2 w-full outline-none"
+            placeholder="write something..."></textarea>
+        <h4 id="charcount" class="font-semibold text-sm">Characrter Counts:</h4>
+    </div>
+
+    <!-- Java script code -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const textarea = document.getElementById("textinput");
+            const charcount = document.getElementById("charcount");
+
+            textarea.addEventListener("input", () => {
+                charcount.textContent = `Character Count: ${textarea.value.length}`;
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

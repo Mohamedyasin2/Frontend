@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Alert</title>
+    <!-- Tailwind Css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 class="flex justify-center items-center min-h-screen">Press any key</h1>
+
+    <!-- java script -->
+    <script>
+        document.addEventListener("keydown", (event) => {
+            if (event.key === " ") {
+                alert("Thank You!");
+                window.close(); // close the current window
+            }
+            else {
+                alert("Invalid key pressed");
+            }
+        })
+    </script>
+</body>
+
+</html>

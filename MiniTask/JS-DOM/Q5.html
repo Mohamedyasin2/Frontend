@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Number</title>
+</head>
+
+<body>
+    <h1>Convert Decimal to Binary or Hexadecimal</h1>
+
+    <label for="number">Enter your number:</label><br>
+    <input type="number" id="decimal_input" class="">
+
+    <button type="submit" onclick="binary()">Convert To Binary</button>
+    <button type="submit" onclick="hexadecimal()">Convert To Hexadecimal</button>
+
+    <p>Result:<span id="result"></span></p>
+
+    <script>
+
+        // for convert binary
+        function binary() {
+
+            let decimal = document.getElementById("decimal_input").value;
+
+            if (decimal.trim() == "") {
+                alert("please enter a number");
+            }
+
+            let binary = parseInt(decimal, 10).toString(2);
+            document.getElementById("result").innerText = `Binary:${binary}`;
+
+        }
+
+        // for convert hexadecimal
+        function hexadecimal() {
+
+            let decimal = document.getElementById("decimal_input").value;
+
+            if (decimal.trim() == "") {
+                alert("please enter a number");
+            }
+
+            let hexa = parseInt(decimal, 10).toString(16).toUpperCase();
+            document.getElementById("result").innerText = `HexaDecimal:${hexa}`;
+
+        }
+    </script>
+</body>
+
+</html>
